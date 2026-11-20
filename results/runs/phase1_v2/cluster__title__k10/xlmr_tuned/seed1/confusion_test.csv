@@ -1,0 +1,11 @@
+,General POS and store application issues,"Cash-register application down (ImpPixel restart, NOC)",Receipt printing and open accounts,Store server services down (NOC restart),Equipment and peripheral requests,SIAN interfaces and end-of-day processing,Kitchen order (comanda) printing,Informational tickets,Network and connectivity,Pixel Point POS down (NOC restart)
+General POS and store application issues,4009,51,68,45,44,68,20,183,44,10
+"Cash-register application down (ImpPixel restart, NOC)",119,1346,24,0,13,4,7,11,11,0
+Receipt printing and open accounts,114,2,1246,0,2,3,31,9,2,4
+Store server services down (NOC restart),41,4,1,1021,0,1,0,0,0,0
+Equipment and peripheral requests,133,3,6,0,494,2,1,27,10,2
+SIAN interfaces and end-of-day processing,46,1,3,0,0,556,0,63,1,0
+Kitchen order (comanda) printing,18,3,3,1,3,0,543,0,0,0
+Informational tickets,112,6,20,2,20,21,3,378,5,0
+Network and connectivity,70,5,3,2,4,1,3,3,451,1
+Pixel Point POS down (NOC restart),11,1,1,0,0,0,0,0,0,372

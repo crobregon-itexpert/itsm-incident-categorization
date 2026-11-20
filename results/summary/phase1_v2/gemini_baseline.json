@@ -1,0 +1,55 @@
+{
+  "n": 1000,
+  "n_unseen": 200,
+  "model": "gemini-2.5-flash",
+  "missing": {
+    "zeroshot": 0,
+    "fewshot": 0
+  },
+  "gemini_zeroshot": {
+    "all_acc": 0.731,
+    "all_f1": 0.732804892594468,
+    "unseen_acc": 0.685,
+    "unseen_f1": 0.5885757443116674
+  },
+  "gemini_fewshot": {
+    "all_acc": 0.741,
+    "all_f1": 0.7390412050138011,
+    "unseen_acc": 0.66,
+    "unseen_f1": 0.5696704996704997
+  },
+  "mlp": {
+    "all_acc": 0.878,
+    "all_f1": 0.8664260294503265,
+    "unseen_acc": 0.815,
+    "unseen_f1": 0.7229879189438014
+  },
+  "beto": {
+    "all_acc": 0.886,
+    "all_f1": 0.8788048700522897,
+    "unseen_acc": 0.825,
+    "unseen_f1": 0.7874950687555637
+  },
+  "audit": {
+    "n": 300,
+    "label_correct": {
+      "si": 0.8867,
+      "no": 0.1,
+      "dudoso": 0.0133
+    },
+    "agreement_best_vs_cluster": 0.9033333333333333,
+    "kappa_best_vs_cluster": 0.8925925925925926,
+    "label_correct_by_category": {
+      "0": 0.5,
+      "1": 0.9,
+      "2": 0.9,
+      "3": 1.0,
+      "4": 0.933,
+      "5": 0.967,
+      "6": 0.933,
+      "7": 0.933,
+      "8": 0.867,
+      "9": 0.933
+    }
+  }
+}

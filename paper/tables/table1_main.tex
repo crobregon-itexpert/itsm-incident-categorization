@@ -1,0 +1,22 @@
+\begin{table*}[!t]
+\centering
+\caption{Incident categorization on the held-out test set (k=10 categories, ticket title only). Mean $\pm$ standard deviation over 5 independent train/validation/test splits; about 11,972 test tickets per split. Unseen titles: test tickets whose cleaned title never occurs in training, each distinct title counted once.}
+\label{tab:main}
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lcccc}
+\hline
+Model & Accuracy (\%) & Macro-F1 & Weighted-F1 & Macro-F1 (unseen titles) \\
+\hline
+BERT (BETO, tuned) & 87.2 $\pm$ 0.2 & 0.857 $\pm$ 0.003 & 0.871 $\pm$ 0.002 & 0.652 $\pm$ 0.010 \\
+XLM-RoBERTa (tuned) & 87.2 $\pm$ 0.1 & 0.857 $\pm$ 0.002 & 0.871 $\pm$ 0.001 & 0.658 $\pm$ 0.011 \\
+MLP (TF-IDF) & 86.8 $\pm$ 0.3 & 0.850 $\pm$ 0.005 & 0.865 $\pm$ 0.003 & 0.634 $\pm$ 0.036 \\
+SVM (word+char n-grams) & 85.9 $\pm$ 0.2 & 0.847 $\pm$ 0.003 & 0.859 $\pm$ 0.002 & 0.630 $\pm$ 0.033 \\
+Linear SVM & 85.9 $\pm$ 0.4 & 0.846 $\pm$ 0.005 & 0.859 $\pm$ 0.003 & 0.643 $\pm$ 0.026 \\
+Random Forest & 85.2 $\pm$ 0.2 & 0.839 $\pm$ 0.003 & 0.851 $\pm$ 0.002 & 0.658 $\pm$ 0.029 \\
+Complement NB & 85.1 $\pm$ 0.2 & 0.834 $\pm$ 0.002 & 0.849 $\pm$ 0.002 & 0.593 $\pm$ 0.022 \\
+Logistic Regression & 83.7 $\pm$ 0.3 & 0.833 $\pm$ 0.003 & 0.841 $\pm$ 0.003 & 0.613 $\pm$ 0.028 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table*}

@@ -1,0 +1,226 @@
+{
+  "timestamp_utc": "2026-11-01T18:45:12+00:00",
+  "git_commit": "colab-search-notebook:42a85a3d6bbc",
+  "config_path": "notebooks/colab_transformer_search_phase1.ipynb",
+  "environment": {
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "transformers": "5.21.0",
+    "sklearn": "1.6.1"
+  },
+  "setting": "cluster__title__k10",
+  "model": "xlmr_tuned",
+  "seed": 0,
+  "labels": [
+    "General POS and store application issues",
+    "Cash-register application down (ImpPixel restart, NOC)",
+    "Receipt printing and open accounts",
+    "Store server services down (NOC restart)",
+    "Equipment and peripheral requests",
+    "SIAN interfaces and end-of-day processing",
+    "Kitchen order (comanda) printing",
+    "Informational tickets",
+    "Network and connectivity",
+    "Pixel Point POS down (NOC restart)"
+  ],
+  "test": {
+    "accuracy": 0.8724523889074507,
+    "balanced_accuracy": 0.8500321572083973,
+    "macro_f1": 0.8537408523287411,
+    "weighted_f1": 0.8700029422286071,
+    "macro_precision": 0.8611368578328061,
+    "macro_recall": 0.8500321572083973,
+    "n": 11972
+  },
+  "val": {
+    "accuracy": 0.8792181757434012,
+    "balanced_accuracy": 0.8613768935531965,
+    "macro_f1": 0.8662474131410833,
+    "weighted_f1": 0.8777630085219605,
+    "macro_precision": 0.8732403670841661,
+    "macro_recall": 0.8613768935531965,
+    "n": 5986
+  },
+  "per_class_test": {
+    "General POS and store application issues": {
+      "precision": 0.8595338983050848,
+      "recall": 0.8932188463232056,
+      "f1-score": 0.8760526884042323,
+      "support": 4542.0
+    },
+    "Cash-register application down (ImpPixel restart, NOC)": {
+      "precision": 0.9369806094182825,
+      "recall": 0.8814332247557003,
+      "f1-score": 0.9083585095669687,
+      "support": 1535.0
+    },
+    "Receipt printing and open accounts": {
+      "precision": 0.8830985915492958,
+      "recall": 0.8874734607218684,
+      "f1-score": 0.8852806212495588,
+      "support": 1413.0
+    },
+    "Store server services down (NOC restart)": {
+      "precision": 0.9324932493249325,
+      "recall": 0.9700374531835206,
+      "f1-score": 0.9508949059201468,
+      "support": 1068.0
+    },
+    "Equipment and peripheral requests": {
+      "precision": 0.8200312989045383,
+      "recall": 0.7728613569321534,
+      "f1-score": 0.7957479119210327,
+      "support": 678.0
+    },
+    "SIAN interfaces and end-of-day processing": {
+      "precision": 0.8363892806770099,
+      "recall": 0.8850746268656716,
+      "f1-score": 0.8600435097897027,
+      "support": 670.0
+    },
+    "Kitchen order (comanda) printing": {
+      "precision": 0.9026845637583892,
+      "recall": 0.9422066549912435,
+      "f1-score": 0.9220222793487575,
+      "support": 571.0
+    },
+    "Informational tickets": {
+      "precision": 0.6414634146341464,
+      "recall": 0.4638447971781305,
+      "f1-score": 0.5383828045035824,
+      "support": 567.0
+    },
+    "Network and connectivity": {
+      "precision": 0.8733205374280231,
+      "recall": 0.8379373848987108,
+      "f1-score": 0.8552631578947368,
+      "support": 543.0
+    },
+    "Pixel Point POS down (NOC restart)": {
+      "precision": 0.9253731343283582,
+      "recall": 0.9662337662337662,
+      "f1-score": 0.9453621346886912,
+      "support": 385.0
+    },
+    "accuracy": 0.8724523889074507,
+    "macro avg": {
+      "precision": 0.8611368578328061,
+      "recall": 0.8500321572083973,
+      "f1-score": 0.8537408523287411,
+      "support": 11972.0
+    },
+    "weighted avg": {
+      "precision": 0.8696939267416682,
+      "recall": 0.8724523889074507,
+      "f1-score": 0.8700029422286071,
+      "support": 11972.0
+    }
+  },
+  "test_unique_titles": {
+    "accuracy": 0.754786771105309,
+    "balanced_accuracy": 0.6529976147884764,
+    "macro_f1": 0.6575864529855159,
+    "weighted_f1": 0.7423615637858703,
+    "macro_precision": 0.685932195394382,
+    "macro_recall": 0.6529976147884764,
+    "n": 4596
+  },
+  "test_unseen_titles": {
+    "accuracy": 0.7883597883597884,
+    "balanced_accuracy": 0.636321849279802,
+    "macro_f1": 0.6523452833420308,
+    "weighted_f1": 0.7772586504016136,
+    "macro_precision": 0.6892802290998725,
+    "macro_recall": 0.636321849279802,
+    "n": 2268,
+    "n_tickets": 2340
+  },
+  "target": "cluster",
+  "inputs": [
+    "title"
+  ],
+  "text_field": "title_bert",
+  "k": 10,
+  "model_name": "FacebookAI/xlm-roberta-base",
+  "bert_config": {
+    "model": "xlmr",
+    "learning_rate": 2e-05,
+    "class_weighted_loss": false,
+    "text_field": "title_bert",
+    "max_len": 64,
+    "batch_size": 32,
+    "max_epochs": 8,
+    "early_stopping_patience": 2,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1
+  },
+  "selected_by": "stage A, seed 0 validation macro-F1",
+  "best_epoch": 6,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 1.047054684310014,
+      "val_accuracy": 0.8575008352823255,
+      "val_macro_f1": 0.843148628446461,
+      "elapsed_s": 256.4
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5141441797197775,
+      "val_accuracy": 0.8685265619779485,
+      "val_macro_f1": 0.858053989665961,
+      "elapsed_s": 484.0
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.4647683181494247,
+      "val_accuracy": 0.8740394253257601,
+      "val_macro_f1": 0.8605446197308062,
+      "elapsed_s": 711.2
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.43772799134083834,
+      "val_accuracy": 0.8743735382559304,
+      "val_macro_f1": 0.8627694313200701,
+      "elapsed_s": 938.5
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.4138205065754534,
+      "val_accuracy": 0.8760441029067825,
+      "val_macro_f1": 0.8634227426760617,
+      "elapsed_s": 1165.7
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.39309290118572365,
+      "val_accuracy": 0.8792181757434012,
+      "val_macro_f1": 0.8662474131410833,
+      "elapsed_s": 1393.0
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.3748850040791826,
+      "val_accuracy": 0.8788840628132308,
+      "val_macro_f1": 0.8648175980623043,
+      "elapsed_s": 1619.6
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.3606415697721807,
+      "val_accuracy": 0.8772134981623789,
+      "val_macro_f1": 0.8631207755199309,
+      "elapsed_s": 1846.8
+    }
+  ],
+  "fit_seconds": 1846.836307376001,
+  "predict_ms_per_ticket": 0.5149390028400455,
+  "trainable_parameters": 278051338,
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "n_train": 41902,
+  "n_val": 5986,
+  "n_test": 11972,
+  "dataset_sha256": "42a85a3d6bbcb39d867fb77a2f15ee569e96129c9f37fc57854c5febd505cfc9"
+}

@@ -1,0 +1,15 @@
+,Analista POS,Analista QA Senior,Analista SAP,Analista de Catalogo y contenido E-Commerce,Analista de Interfaces,Gestor de POS,Soporte Campo,TI-Almacén,TI-Comunicaciones,TI-Helpdesk,TI-NOC,TI-Servidores,TI-Soporte,TI-Supervisor
+Analista POS,32,0,0,0,0,0,1,0,1,11,0,1,3,0
+Analista QA Senior,0,3,0,0,4,0,0,0,1,2,0,0,0,0
+Analista SAP,0,0,8,0,0,0,0,0,0,7,0,1,1,0
+Analista de Catalogo y contenido E-Commerce,0,0,0,3,0,0,0,1,0,0,1,0,0,1
+Analista de Interfaces,2,18,0,0,49,0,0,1,3,14,2,1,4,2
+Gestor de POS,0,1,0,0,0,10,0,0,0,0,0,0,1,0
+Soporte Campo,3,0,0,2,0,0,34,2,0,2,2,1,4,0
+TI-Almacén,2,0,0,0,1,0,4,223,3,16,5,4,15,2
+TI-Comunicaciones,1,0,0,0,0,0,0,1,12,4,1,1,2,0
+TI-Helpdesk,208,86,94,19,204,10,81,75,181,3321,253,190,957,270
+TI-NOC,12,4,0,2,11,1,8,15,30,127,2836,12,100,10
+TI-Servidores,0,0,1,0,1,0,2,0,1,7,0,26,5,0
+TI-Soporte,40,9,14,7,23,6,55,42,45,467,105,48,1246,139
+TI-Supervisor,0,1,0,0,1,0,0,2,0,4,0,1,1,1

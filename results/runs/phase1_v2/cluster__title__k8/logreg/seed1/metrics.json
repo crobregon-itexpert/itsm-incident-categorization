@@ -1,0 +1,176 @@
+{
+  "timestamp_utc": "2026-11-01T14:03:34+00:00",
+  "git_commit": "32e17b41f7957ca1a1e493bfe528504581e62a94-dirty",
+  "config_path": "configs/phase1_v2.yaml",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "setting": "cluster__title__k8",
+  "model": "logreg",
+  "seed": 1,
+  "labels": [
+    "cuenta / imppixel / cuenta abierta",
+    "valida funcionamiento / funcionamiento / aplicativo valida",
+    "conexion / equipo / solicitud",
+    "caja / corte / corte caja",
+    "boleta / impresion / impresion boleta",
+    "comanda / impresion comanda / impresion",
+    "informativo / tk informativo / tk",
+    "interface / descarga / venta"
+  ],
+  "test": {
+    "accuracy": 0.8261777480788507,
+    "balanced_accuracy": 0.8340873922610423,
+    "macro_f1": 0.8075506373716312,
+    "weighted_f1": 0.82927503161059,
+    "macro_precision": 0.7893892277869184,
+    "macro_recall": 0.8340873922610423,
+    "n": 11972
+  },
+  "val": {
+    "accuracy": 0.8249248245907117,
+    "balanced_accuracy": 0.8363443793896391,
+    "macro_f1": 0.8043390234398352,
+    "weighted_f1": 0.8279810709391197,
+    "macro_precision": 0.7827073293931204,
+    "macro_recall": 0.8363443793896391,
+    "n": 5986
+  },
+  "per_class_test": {
+    "cuenta / imppixel / cuenta abierta": {
+      "precision": 0.8684429641965029,
+      "recall": 0.7512605042016807,
+      "f1-score": 0.8056127703398558,
+      "support": 4165.0
+    },
+    "valida funcionamiento / funcionamiento / aplicativo valida": {
+      "precision": 0.9076655052264808,
+      "recall": 0.9195199435227673,
+      "f1-score": 0.9135542696826232,
+      "support": 2833.0
+    },
+    "conexion / equipo / solicitud": {
+      "precision": 0.7653061224489796,
+      "recall": 0.8200168208578638,
+      "f1-score": 0.7917174177831913,
+      "support": 1189.0
+    },
+    "caja / corte / corte caja": {
+      "precision": 0.8209764918625678,
+      "recall": 0.8307410795974383,
+      "f1-score": 0.8258299226921327,
+      "support": 1093.0
+    },
+    "boleta / impresion / impresion boleta": {
+      "precision": 0.8527724665391969,
+      "recall": 0.8796844181459567,
+      "f1-score": 0.8660194174757282,
+      "support": 1014.0
+    },
+    "comanda / impresion comanda / impresion": {
+      "precision": 0.8986486486486487,
+      "recall": 0.9300699300699301,
+      "f1-score": 0.9140893470790378,
+      "support": 572.0
+    },
+    "informativo / tk informativo / tk": {
+      "precision": 0.4391657010428737,
+      "recall": 0.6707964601769911,
+      "f1-score": 0.530812324929972,
+      "support": 565.0
+    },
+    "interface / descarga / venta": {
+      "precision": 0.7621359223300971,
+      "recall": 0.8706099815157117,
+      "f1-score": 0.8127696289905091,
+      "support": 541.0
+    },
+    "accuracy": 0.8261777480788507,
+    "macro avg": {
+      "precision": 0.7893892277869184,
+      "recall": 0.8340873922610423,
+      "f1-score": 0.8075506373716312,
+      "support": 11972.0
+    },
+    "weighted avg": {
+      "precision": 0.8382008077639705,
+      "recall": 0.8261777480788507,
+      "f1-score": 0.82927503161059,
+      "support": 11972.0
+    }
+  },
+  "target": "cluster",
+  "inputs": [
+    "title"
+  ],
+  "k": 8,
+  "features": "word",
+  "n_features": 6156,
+  "best_params": {
+    "C": 1.0
+  },
+  "grid": [
+    {
+      "params": {
+        "C": 0.25
+      },
+      "val_macro_f1": 0.8016442159011942,
+      "fit_seconds": 0.8668318280001586,
+      "epochs": null
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "val_macro_f1": 0.8043390234398352,
+      "fit_seconds": 1.6695637669999996,
+      "epochs": null
+    },
+    {
+      "params": {
+        "C": 4.0
+      },
+      "val_macro_f1": 0.8016907301648174,
+      "fit_seconds": 2.2689445629998772,
+      "epochs": null
+    },
+    {
+      "params": {
+        "C": 16.0
+      },
+      "val_macro_f1": 0.7939247286334692,
+      "fit_seconds": 3.0247364800002288,
+      "epochs": null
+    }
+  ],
+  "fit_seconds": 1.6695637669999996,
+  "feature_seconds": 0.2546662770000694,
+  "predict_ms_per_ticket": 9.292407285563833e-05,
+  "n_train": 41902,
+  "n_val": 5986,
+  "n_test": 11972,
+  "test_unique_titles": {
+    "accuracy": 0.6931866271688532,
+    "balanced_accuracy": 0.6611255493219974,
+    "macro_f1": 0.6483006532254272,
+    "weighted_f1": 0.6908446937029982,
+    "macro_precision": 0.6603252191157234,
+    "macro_recall": 0.6611255493219974,
+    "n": 4726
+  },
+  "test_unseen_titles": {
+    "accuracy": 0.7121342512908778,
+    "balanced_accuracy": 0.665493687801757,
+    "macro_f1": 0.6471912022307167,
+    "weighted_f1": 0.7121868651061014,
+    "macro_precision": 0.6846436358089794,
+    "macro_recall": 0.665493687801757,
+    "n": 2324,
+    "n_tickets": 2389
+  }
+}

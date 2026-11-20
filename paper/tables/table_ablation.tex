@@ -1,0 +1,23 @@
+\begin{table}[!t]
+\centering
+\caption{Input and target ablation. The solution field is written after the ticket is resolved, so title + solution is an upper bound and not a deployable setting. The resolver-group target uses the human-assigned field Grupo Asignado instead of cluster labels.}
+\label{tab:ablation}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{llcc}
+\hline
+Setting & Model & Accuracy (\%) & Macro-F1 \\
+\hline
+Title (deployable) & Logistic Regression & 83.7 $\pm$ 0.3 & 0.833 $\pm$ 0.003 \\
+Title (deployable) & Linear SVM & 85.9 $\pm$ 0.4 & 0.846 $\pm$ 0.005 \\
+Title (deployable) & SVM (word+char n-grams) & 85.9 $\pm$ 0.2 & 0.847 $\pm$ 0.003 \\
+Title (deployable) & Complement NB & 85.1 $\pm$ 0.2 & 0.834 $\pm$ 0.002 \\
+Title + solution (upper bound) & Logistic Regression & 97.2 $\pm$ 0.1 & 0.970 $\pm$ 0.000 \\
+Title + solution (upper bound) & Linear SVM & 96.9 $\pm$ 0.1 & 0.967 $\pm$ 0.001 \\
+Title $\rightarrow$ resolver group & Logistic Regression & 65.2 $\pm$ 0.6 & 0.339 $\pm$ 0.021 \\
+Title $\rightarrow$ resolver group & Linear SVM & 71.3 $\pm$ 0.6 & 0.381 $\pm$ 0.017 \\
+Title $\rightarrow$ resolver group & Complement NB & 75.2 $\pm$ 0.3 & 0.426 $\pm$ 0.017 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

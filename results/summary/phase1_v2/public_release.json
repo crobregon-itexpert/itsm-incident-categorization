@@ -1,0 +1,10 @@
+{
+ "file": "itsm_incidents_2024_public.csv",
+ "sha256": "cc2257cd3b059cf6893517357aec1d2afd9194f30ec30b2ae4c5c80904da11e5",
+ "rows": 59860,
+ "rows_changed": {
+  "title_bert": 17460,
+  "title_clean": 1536
+ },
+ "note": "Organization, group and brand identifiers were replaced by neutral codes (one-to-one word substitution) before release."
+}

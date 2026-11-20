@@ -1,0 +1,68 @@
+{
+  "source": "results/agent_eval/results_run44412039632.jsonl",
+  "summary": {
+    "in_scope": {
+      "n": 30,
+      "classifier_accuracy": 0.4,
+      "confident_share": 0.5666666666666667,
+      "confident_accuracy": 0.5294117647058824,
+      "wrongly_declined": 4,
+      "request_or_informative_tickets": 0,
+      "proposal_share": 0.5666666666666667,
+      "would_solve_of_proposals": 0.17647058823529413,
+      "would_solve_of_all": 0.1,
+      "grounded_of_proposals": 0.7647058823529411,
+      "hallucination_of_proposals": 0.23529411764705882,
+      "ticket_when_not_solved": 0.8518518518518519,
+      "questions_mean": 1.0,
+      "seconds_to_proposal_median": 18.9835,
+      "classifier_roundtrip_ms_median": 41.0
+    },
+    "in_scope_unseen": {
+      "n": 20,
+      "classifier_accuracy": 0.4,
+      "confident_share": 0.6,
+      "confident_accuracy": 0.5,
+      "wrongly_declined": 4,
+      "request_or_informative_tickets": 0,
+      "proposal_share": 0.45,
+      "would_solve_of_proposals": 0.2222222222222222,
+      "would_solve_of_all": 0.1,
+      "grounded_of_proposals": 0.8888888888888888,
+      "hallucination_of_proposals": 0.2222222222222222,
+      "ticket_when_not_solved": 0.7777777777777778,
+      "questions_mean": 0.85,
+      "seconds_to_proposal_median": 16.808500000000002,
+      "classifier_roundtrip_ms_median": 41.0
+    },
+    "in_scope_seen": {
+      "n": 10,
+      "classifier_accuracy": 0.4,
+      "confident_share": 0.5,
+      "confident_accuracy": 0.6,
+      "wrongly_declined": 0,
+      "request_or_informative_tickets": 0,
+      "proposal_share": 0.8,
+      "would_solve_of_proposals": 0.125,
+      "would_solve_of_all": 0.1,
+      "grounded_of_proposals": 0.625,
+      "hallucination_of_proposals": 0.25,
+      "ticket_when_not_solved": 1.0,
+      "questions_mean": 1.3,
+      "seconds_to_proposal_median": 20.1585,
+      "classifier_roundtrip_ms_median": 42.5
+    },
+    "out_of_scope": {
+      "n": 5,
+      "correctly_declined": 5,
+      "tickets_created": 0
+    },
+    "errors": [],
+    "judge_model": [
+      "gemini-3.1-pro-preview"
+    ],
+    "user_model": [
+      "gemini-2.5-flash"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+\begin{table}[!t]
+\centering
+\caption{External LLM baseline (gemini-2.5-flash, temperature 0, no thinking) against the fine-tuned and TF-IDF models on the same 1000 seed-0 test tickets (stratified sample; 200 with titles unseen in training).}
+\label{tab:gemini}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lcccc}
+\hline
+Model & Acc. (\%) & Macro-F1 & Unseen acc. (\%) & Unseen macro-F1 \\
+\hline
+Gemini zero-shot & 73.1 & 0.733 & 68.5 & 0.589 \\
+Gemini few-shot (3/class) & 74.1 & 0.739 & 66.0 & 0.570 \\
+MLP (TF-IDF) & 87.8 & 0.866 & 81.5 & 0.723 \\
+BETO (tuned) & 88.6 & 0.879 & 82.5 & 0.787 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

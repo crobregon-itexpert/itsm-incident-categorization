@@ -1,0 +1,218 @@
+{
+  "timestamp_utc": "2026-11-01T14:21:05+00:00",
+  "git_commit": "32e17b41f7957ca1a1e493bfe528504581e62a94-dirty",
+  "config_path": "configs/phase1_v2.yaml",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "setting": "grupo__title",
+  "model": "logreg",
+  "seed": 0,
+  "labels": [
+    "Analista POS",
+    "Analista QA Senior",
+    "Analista SAP",
+    "Analista de Catalogo y contenido E-Commerce",
+    "Analista de Interfaces",
+    "Gestor de POS",
+    "Soporte Campo",
+    "TI-Almacén",
+    "TI-Comunicaciones",
+    "TI-Helpdesk",
+    "TI-NOC",
+    "TI-Servidores",
+    "TI-Soporte",
+    "TI-Supervisor"
+  ],
+  "test": {
+    "accuracy": 0.6585263862172785,
+    "balanced_accuracy": 0.5736927137783729,
+    "macro_f1": 0.3115813508079711,
+    "weighted_f1": 0.6959945568458719,
+    "macro_precision": 0.2713703827017408,
+    "macro_recall": 0.5736927137783729,
+    "n": 11957
+  },
+  "val": {
+    "accuracy": 0.6671684228131795,
+    "balanced_accuracy": 0.5295818240722053,
+    "macro_f1": 0.3301136298411492,
+    "weighted_f1": 0.7065979019058644,
+    "macro_precision": 0.29351377290237235,
+    "macro_recall": 0.5295818240722053,
+    "n": 5979
+  },
+  "per_class_test": {
+    "Analista POS": {
+      "precision": 0.10344827586206896,
+      "recall": 0.4117647058823529,
+      "f1-score": 0.16535433070866143,
+      "support": 51.0
+    },
+    "Analista QA Senior": {
+      "precision": 0.017543859649122806,
+      "recall": 0.2857142857142857,
+      "f1-score": 0.03305785123966942,
+      "support": 7.0
+    },
+    "Analista SAP": {
+      "precision": 0.07142857142857142,
+      "recall": 0.46153846153846156,
+      "f1-score": 0.12371134020618557,
+      "support": 13.0
+    },
+    "Analista de Catalogo y contenido E-Commerce": {
+      "precision": 0.06593406593406594,
+      "recall": 0.75,
+      "f1-score": 0.12121212121212122,
+      "support": 8.0
+    },
+    "Analista de Interfaces": {
+      "precision": 0.20938628158844766,
+      "recall": 0.58,
+      "f1-score": 0.3076923076923077,
+      "support": 100.0
+    },
+    "Gestor de POS": {
+      "precision": 0.2,
+      "recall": 0.8,
+      "f1-score": 0.32,
+      "support": 5.0
+    },
+    "Soporte Campo": {
+      "precision": 0.15228426395939088,
+      "recall": 0.6122448979591837,
+      "f1-score": 0.24390243902439024,
+      "support": 49.0
+    },
+    "TI-Almacén": {
+      "precision": 0.5994623655913979,
+      "recall": 0.8050541516245487,
+      "f1-score": 0.687211093990755,
+      "support": 277.0
+    },
+    "TI-Comunicaciones": {
+      "precision": 0.058823529411764705,
+      "recall": 0.43478260869565216,
+      "f1-score": 0.10362694300518134,
+      "support": 23.0
+    },
+    "TI-Helpdesk": {
+      "precision": 0.8388037928519329,
+      "recall": 0.5738522954091816,
+      "f1-score": 0.6814814814814815,
+      "support": 6012.0
+    },
+    "TI-NOC": {
+      "precision": 0.8745318352059925,
+      "recall": 0.8869895536562203,
+      "f1-score": 0.8807166430928807,
+      "support": 3159.0
+    },
+    "TI-Servidores": {
+      "precision": 0.07878787878787878,
+      "recall": 0.6190476190476191,
+      "f1-score": 0.13978494623655913,
+      "support": 42.0
+    },
+    "TI-Soporte": {
+      "precision": 0.5215736040609137,
+      "recall": 0.5607094133697135,
+      "f1-score": 0.5404339250493096,
+      "support": 2199.0
+    },
+    "TI-Supervisor": {
+      "precision": 0.007177033492822967,
+      "recall": 0.25,
+      "f1-score": 0.013953488372093023,
+      "support": 12.0
+    },
+    "accuracy": 0.6585263862172785,
+    "macro avg": {
+      "precision": 0.2713703827017408,
+      "recall": 0.5736927137783729,
+      "f1-score": 0.3115813508079711,
+      "support": 11957.0
+    },
+    "weighted avg": {
+      "precision": 0.7660390839895627,
+      "recall": 0.6585263862172785,
+      "f1-score": 0.6959945568458719,
+      "support": 11957.0
+    }
+  },
+  "target": "grupo",
+  "inputs": [
+    "title"
+  ],
+  "k": null,
+  "features": "word",
+  "n_features": 6256,
+  "best_params": {
+    "C": 16.0
+  },
+  "grid": [
+    {
+      "params": {
+        "C": 0.25
+      },
+      "val_macro_f1": 0.32047814884319736,
+      "fit_seconds": 1.351949732000321,
+      "epochs": null
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "val_macro_f1": 0.3175374960636788,
+      "fit_seconds": 2.015691970000262,
+      "epochs": null
+    },
+    {
+      "params": {
+        "C": 4.0
+      },
+      "val_macro_f1": 0.32466264470357764,
+      "fit_seconds": 3.2392136429998573,
+      "epochs": null
+    },
+    {
+      "params": {
+        "C": 16.0
+      },
+      "val_macro_f1": 0.3301136298411492,
+      "fit_seconds": 4.070440244999645,
+      "epochs": null
+    }
+  ],
+  "fit_seconds": 4.070440244999645,
+  "feature_seconds": 0.28834367500030567,
+  "predict_ms_per_ticket": 0.00015059421258653785,
+  "n_train": 41857,
+  "n_val": 5979,
+  "n_test": 11957,
+  "test_unique_titles": {
+    "accuracy": 0.5465877878723854,
+    "balanced_accuracy": 0.48820183208990275,
+    "macro_f1": 0.31151357960261583,
+    "weighted_f1": 0.5663107602410627,
+    "macro_precision": 0.2703436204283577,
+    "macro_recall": 0.48820183208990275,
+    "n": 4733
+  },
+  "test_unseen_titles": {
+    "accuracy": 0.5689123734037869,
+    "balanced_accuracy": 0.5206559629441846,
+    "macro_f1": 0.31448135200302374,
+    "weighted_f1": 0.5828019148136968,
+    "macro_precision": 0.27856368732338793,
+    "macro_recall": 0.4834662513053142,
+    "n": 2271,
+    "n_tickets": 2333
+  }
+}

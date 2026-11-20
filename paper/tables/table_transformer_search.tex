@@ -1,0 +1,22 @@
+\begin{table}[!t]
+\centering
+\caption{Transformer hyperparameter search (declared before running): validation macro-F1 on seed 0; the test split was not scored for any configuration in this stage. Fixed: AdamW, weight decay 0.01, linear warm-up 10\%, batch 32, max length 64, up to 8 epochs, early stopping patience 2, mixed precision, full fine-tuning, NVIDIA T4.}
+\label{tab:search}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lccccc}
+\hline
+Model & LR & Class weights & Val. Macro-F1 & Best epoch & Min \\
+\hline
+XLM-RoBERTa base (selected) & 2e-05 & no & 0.866 & 6 & 30 \\
+BETO & 2e-05 & no & 0.865 & 3 & 11 \\
+XLM-RoBERTa base & 3e-05 & no & 0.864 & 2 & 15 \\
+BETO & 3e-05 & no & 0.863 & 3 & 12 \\
+XLM-RoBERTa base & 3e-05 & yes & 0.855 & 4 & 23 \\
+XLM-RoBERTa base & 2e-05 & yes & 0.847 & 4 & 23 \\
+BETO & 2e-05 & yes & 0.847 & 4 & 14 \\
+BETO & 3e-05 & yes & 0.842 & 2 & 9 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

@@ -1,0 +1,69 @@
+# Static incident taxonomy (k = 10). Source of truth for category names in the paper (English)
+# and in the IT Expert / Teams interface (Spanish). Ids = K-means cluster ids of experiment
+# phase1_v1, ordered by size (0 = largest); labels per ticket: results/labels/phase1_v1/labels_k10.csv.gz
+#
+# Naming procedure (reported in the paper):
+#   1. Evidence per cluster: size, top TF-IDF terms, dominant Nivel 1 / Nivel 2 / Grupo Asignado
+#      (results/summary/phase1_v1/clusters_k10.json) and 20 random tickets (data/naming/, not committed).
+#   2. Draft name (EN + ES) and definition proposed by an AI assistant (Claude, Anthropic) from that evidence.
+#   3. Review and approval by the service desk lead (C. Obregón); edits recorded below.
+#   4. Validation: LLM audit of 300 tickets and a blind author check (paper, Section IV-B).
+# Criteria: name the operational problem (what failed), not the channel; keep NOC automated restarts
+# separate from user-reported tickets; names must be usable for routing and reporting.
+
+status: approved
+drafted_by: Claude (Anthropic), 2026-11-01
+approved_by: C. Obregón (service desk lead), 2026-11-01
+
+categories:
+  0:
+    name_en: General POS and store application issues
+    name_es: Incidencias generales de POS y aplicativos de tienda
+    definition: User-reported problems with point-of-sale and store applications (ImpPixel, SAP, vouchers, cash close, buttons) that do not fit a more specific category.
+    definition_es: Problemas reportados por usuarios con el POS y aplicativos de tienda (ImpPixel, SAP, vales, corte de caja, botones) que no encajan en una categoría más específica.
+    note: Catch-all cluster (37.9%); heterogeneous by construction.
+  1:
+    name_en: Cash-register application down (ImpPixel restart, NOC)
+    name_es: Aplicativo de caja caído (reinicio ImpPixel, NOC)
+    definition: Monitoring alerts for ImpPixel / store apps closed on a cash register or delivery station; resolved by restarting the application.
+    definition_es: Alertas de monitoreo por ImpPixel o aplicativos cerrados en una caja o estación de delivery; se resuelven reiniciando el aplicativo.
+  2:
+    name_en: Receipt printing and open accounts
+    name_es: Impresión de boletas y cuentas abiertas
+    definition: Receipts (boletas) not printing, print queue or ticket printer failures, and open accounts that block voiding or cash close.
+    definition_es: Boletas que no se imprimen, fallas de cola de impresión o ticketera, y cuentas abiertas que impiden anular o hacer el corte de caja.
+  3:
+    name_en: Store server services down (NOC restart)
+    name_es: Servicios del servidor de tienda caídos (reinicio, NOC)
+    definition: Monitoring alerts for server-side services (ImpPixel, SyBase, APILocalService) on the store server; resolved by restarting the service.
+    definition_es: Alertas de monitoreo por servicios del servidor de tienda caídos (ImpPixel, SyBase, APILocalService); se resuelven reiniciando el servicio.
+  4:
+    name_en: Equipment and peripheral requests
+    name_es: Solicitudes de equipos y periféricos
+    definition: Requests and replacements of hardware handled by warehouse or field support (laptops, thermal printers, touch screens, cables, adapters, cash drawers).
+    definition_es: Solicitudes y reemplazos de hardware atendidos por almacén o soporte de campo (laptops, térmicas, touch, cables, adaptadores, gavetas).
+  5:
+    name_en: SIAN interfaces and end-of-day processing
+    name_es: Interfaces SIAN y cierre de día
+    definition: SIAN / SIAN Web interface processing, sales download, end-of-day close and SIAN access.
+    definition_es: Procesamiento de interfaces SIAN / SIAN Web, descarga de ventas, cierre de día y acceso a SIAN.
+  6:
+    name_en: Kitchen order (comanda) printing
+    name_es: Impresión de comandas en cocina
+    definition: Kitchen orders (comandas) not printing on kitchen ticket printers.
+    definition_es: Comandas que no se imprimen en las ticketeras de cocina.
+  7:
+    name_en: Informational tickets
+    name_es: Tickets informativos
+    definition: Notifications and e-mail threads logged for record only (price or button changes, store openings, adjustments); no technical fault.
+    definition_es: Notificaciones y correos registrados solo como constancia (cambios de precios o botones, aperturas de tienda, ajustes); sin falla técnica.
+  8:
+    name_en: Network and connectivity
+    name_es: Red y conectividad
+    definition: Internet, link, LAN or Wi-Fi outages; store server or registers without connection.
+    definition_es: Caídas de internet, enlace, red local o wifi; servidor o cajas sin conexión.
+  9:
+    name_en: Pixel Point POS down (NOC restart)
+    name_es: Pixel Point caído (reinicio, NOC)
+    definition: Monitoring alerts and reports of the Pixel Point POS application closed or frozen on a cash register; resolved by restarting it.
+    definition_es: Alertas o reportes de Pixel Point cerrado o colgado en una caja; se resuelven reiniciándolo.

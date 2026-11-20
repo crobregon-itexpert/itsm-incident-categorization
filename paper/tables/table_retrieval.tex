@@ -1,0 +1,18 @@
+\begin{table*}[!t]
+\centering
+\caption{Offline evaluation of the retrieval step (top-5 similar resolved incidents from the training split; TF-IDF retriever as a proxy for the agent's search). Hit: a retrieved case has the query's true category. Resolution similarity: max cosine between the query's actual resolution note and the retrieved notes. Mean $\pm$ std over 5 splits; about 7,821 queries (all) and 1,304 (unseen titles) per split.}
+\label{tab:retrieval}
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{lcccc}
+\hline
+Retrieval filter & Hit@5 (all) & Res. sim. (all) & Hit@5 (unseen) & Res. sim. (unseen) \\
+\hline
+No filter & 0.845 $\pm$ 0.072 & 0.309 $\pm$ 0.082 & 0.821 $\pm$ 0.004 & 0.221 $\pm$ 0.005 \\
+Predicted category (always) & 0.840 $\pm$ 0.003 & 0.386 $\pm$ 0.062 & 0.702 $\pm$ 0.011 & 0.200 $\pm$ 0.008 \\
+Predicted category if $p\ge0.8$ & 0.879 $\pm$ 0.007 & 0.391 $\pm$ 0.063 & 0.772 $\pm$ 0.020 & 0.211 $\pm$ 0.006 \\
+True category (oracle) & 1.000 $\pm$ 0.000 & 0.441 $\pm$ 0.061 & 1.000 $\pm$ 0.000 & 0.308 $\pm$ 0.005 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table*}

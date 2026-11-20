@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-11-18T18:45:59+00:00",
+  "git_commit": "2c3eb4475838b6fb58e2c7954e4ce6d818ff6d0d-dirty",
+  "config_path": "configs/phase1_v2.yaml",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v595-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "seed": 2,
+  "k": 5,
+  "kb_size": 16008,
+  "summary": {
+    "all": {
+      "n_queries": 7868,
+      "category_hit@5_none": 0.7452974072191154,
+      "resolution_similarity_none": 0.2222477780406078,
+      "category_hit@5_predicted": 0.8350279613624809,
+      "resolution_similarity_predicted": 0.30110613617221604,
+      "category_hit@5_predicted_conf0.8": 0.871377732587697,
+      "resolution_similarity_predicted_conf0.8": 0.3042189484151168,
+      "category_hit@5_oracle": 1.0,
+      "resolution_similarity_oracle": 0.35918531834314804
+    },
+    "unseen_titles": {
+      "n_queries": 1341,
+      "category_hit@5_none": 0.8180462341536167,
+      "resolution_similarity_none": 0.21385908829542752,
+      "category_hit@5_predicted": 0.7009694258016406,
+      "resolution_similarity_predicted": 0.1964956486429586,
+      "category_hit@5_predicted_conf0.8": 0.7554064131245339,
+      "resolution_similarity_predicted_conf0.8": 0.20560632280519944,
+      "category_hit@5_oracle": 1.0,
+      "resolution_similarity_oracle": 0.30023129556598194
+    }
+  }
+}

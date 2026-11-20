@@ -1,0 +1,254 @@
+{
+  "timestamp_utc": "2026-11-01T13:52:53+00:00",
+  "git_commit": "32e17b41f7957ca1a1e493bfe528504581e62a94-dirty",
+  "config_path": "configs/phase1_v2.yaml",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "setting": "cluster__title__k10",
+  "model": "mlp",
+  "seed": 3,
+  "labels": [
+    "General POS and store application issues",
+    "Cash-register application down (ImpPixel restart, NOC)",
+    "Receipt printing and open accounts",
+    "Store server services down (NOC restart)",
+    "Equipment and peripheral requests",
+    "SIAN interfaces and end-of-day processing",
+    "Kitchen order (comanda) printing",
+    "Informational tickets",
+    "Network and connectivity",
+    "Pixel Point POS down (NOC restart)"
+  ],
+  "test": {
+    "accuracy": 0.8675242231874374,
+    "balanced_accuracy": 0.8372704618361734,
+    "macro_f1": 0.8475711626903701,
+    "weighted_f1": 0.8634574571639735,
+    "macro_precision": 0.8656648687125216,
+    "macro_recall": 0.8372704618361734,
+    "n": 11972
+  },
+  "val": {
+    "accuracy": 0.8775476110925493,
+    "balanced_accuracy": 0.847287209398719,
+    "macro_f1": 0.8584444166099479,
+    "weighted_f1": 0.8737265350156576,
+    "macro_precision": 0.8801040202146622,
+    "macro_recall": 0.847287209398719,
+    "n": 5986
+  },
+  "per_class_test": {
+    "General POS and store application issues": {
+      "precision": 0.838241308793456,
+      "recall": 0.9024658740642889,
+      "f1-score": 0.8691687871077184,
+      "support": 4542.0
+    },
+    "Cash-register application down (ImpPixel restart, NOC)": {
+      "precision": 0.8952254641909815,
+      "recall": 0.8794788273615635,
+      "f1-score": 0.8872822872165625,
+      "support": 1535.0
+    },
+    "Receipt printing and open accounts": {
+      "precision": 0.9144786196549137,
+      "recall": 0.8627034677990092,
+      "f1-score": 0.887836853605244,
+      "support": 1413.0
+    },
+    "Store server services down (NOC restart)": {
+      "precision": 0.9376693766937669,
+      "recall": 0.9719101123595506,
+      "f1-score": 0.9544827586206897,
+      "support": 1068.0
+    },
+    "Equipment and peripheral requests": {
+      "precision": 0.8195956454121306,
+      "recall": 0.7772861356932154,
+      "f1-score": 0.7978803936411809,
+      "support": 678.0
+    },
+    "SIAN interfaces and end-of-day processing": {
+      "precision": 0.8715596330275229,
+      "recall": 0.8507462686567164,
+      "f1-score": 0.8610271903323263,
+      "support": 670.0
+    },
+    "Kitchen order (comanda) printing": {
+      "precision": 0.9068219633943427,
+      "recall": 0.9544658493870403,
+      "f1-score": 0.9300341296928327,
+      "support": 571.0
+    },
+    "Informational tickets": {
+      "precision": 0.6447761194029851,
+      "recall": 0.38095238095238093,
+      "f1-score": 0.4789356984478936,
+      "support": 567.0
+    },
+    "Network and connectivity": {
+      "precision": 0.8988095238095238,
+      "recall": 0.8342541436464088,
+      "f1-score": 0.8653295128939829,
+      "support": 543.0
+    },
+    "Pixel Point POS down (NOC restart)": {
+      "precision": 0.929471032745592,
+      "recall": 0.9584415584415584,
+      "f1-score": 0.9437340153452686,
+      "support": 385.0
+    },
+    "accuracy": 0.8675242231874374,
+    "macro avg": {
+      "precision": 0.8656648687125216,
+      "recall": 0.8372704618361734,
+      "f1-score": 0.8475711626903701,
+      "support": 11972.0
+    },
+    "weighted avg": {
+      "precision": 0.8640132323344071,
+      "recall": 0.8675242231874374,
+      "f1-score": 0.8634574571639735,
+      "support": 11972.0
+    }
+  },
+  "target": "cluster",
+  "inputs": [
+    "title"
+  ],
+  "k": 10,
+  "features": "word",
+  "n_features": 6220,
+  "best_params": {
+    "hidden": 256,
+    "alpha": 0.01
+  },
+  "grid": [
+    {
+      "params": {
+        "hidden": 256,
+        "alpha": 0.0001
+      },
+      "val_macro_f1": 0.8562506158146143,
+      "fit_seconds": 26.051208039999892,
+      "epochs": [
+        {
+          "epoch": 1,
+          "train_loss": 1.074060623492648,
+          "val_macro_f1": 0.8385398859137758
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.4750538305031235,
+          "val_macro_f1": 0.8522467214363317
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4359463325161073,
+          "val_macro_f1": 0.8560429632758677
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.41762749935559823,
+          "val_macro_f1": 0.8562506158146143
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.4060224925127734,
+          "val_macro_f1": 0.854298987519409
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.3977159074094066,
+          "val_macro_f1": 0.8539997741488767
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.3914198962977201,
+          "val_macro_f1": 0.8529102340065094
+        }
+      ]
+    },
+    {
+      "params": {
+        "hidden": 256,
+        "alpha": 0.01
+      },
+      "val_macro_f1": 0.8584444166099479,
+      "fit_seconds": 28.60135518800007,
+      "epochs": [
+        {
+          "epoch": 1,
+          "train_loss": 1.0830447206336022,
+          "val_macro_f1": 0.8385678381925239
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.5116789564309685,
+          "val_macro_f1": 0.8509079940484845
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4851367298473355,
+          "val_macro_f1": 0.8568866927319043
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.4750317415221954,
+          "val_macro_f1": 0.858347594708999
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.4693320758582158,
+          "val_macro_f1": 0.8584444166099479
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.46555908431027876,
+          "val_macro_f1": 0.8582610188399016
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.46280668081442145,
+          "val_macro_f1": 0.8582961488436907
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.46070772085154316,
+          "val_macro_f1": 0.8573884792266806
+        }
+      ]
+    }
+  ],
+  "fit_seconds": 28.60135518800007,
+  "feature_seconds": 0.36599823300002754,
+  "predict_ms_per_ticket": 0.0015921876043853013,
+  "n_train": 41902,
+  "n_val": 5986,
+  "n_test": 11972,
+  "test_unique_titles": {
+    "accuracy": 0.7505418292154313,
+    "balanced_accuracy": 0.6171975163593799,
+    "macro_f1": 0.6405142191658943,
+    "weighted_f1": 0.7328569759654706,
+    "macro_precision": 0.699510605723716,
+    "macro_recall": 0.6171975163593799,
+    "n": 4614
+  },
+  "test_unseen_titles": {
+    "accuracy": 0.7857766143106457,
+    "balanced_accuracy": 0.5660592435972183,
+    "macro_f1": 0.600248958648146,
+    "weighted_f1": 0.7689798861001272,
+    "macro_precision": 0.7196842247593944,
+    "macro_recall": 0.5660592435972183,
+    "n": 2292,
+    "n_tickets": 2368
+  }
+}

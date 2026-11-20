@@ -1,0 +1,16 @@
+,solicitud / equipo / almacen,interface / sap / dia,valida funcionamiento / funcionamiento / aplicativo valida,boleta / impresion / impresion boleta,servidor inicia / servidor / valida funcionamiento,caja / corte / vale,cuenta / cuenta abierta / abierta,imppixel / servidor / aplicativo imppixel,comanda / impresion comanda / impresion,pixel / pos / pixel pos,informativo / tk informativo / tk,conexion / servidor conexion / servidor,delivery inicia / delivery / imppixel delivery,pixel point / point / pixel,boton / creacion / boton creacion
+solicitud / equipo / almacen,1970,30,9,53,0,34,19,36,14,20,192,45,3,1,9
+interface / sap / dia,46,1040,2,3,1,13,5,7,1,3,75,2,2,0,6
+valida funcionamiento / funcionamiento / aplicativo valida,57,9,879,16,0,8,5,27,7,3,26,9,0,0,8
+boleta / impresion / impresion boleta,46,3,2,865,0,15,5,3,24,6,27,1,1,3,3
+servidor inicia / servidor / valida funcionamiento,1,1,1,1,939,0,0,22,1,0,2,1,3,0,0
+caja / corte / vale,35,6,3,29,1,669,9,19,5,16,13,8,0,0,7
+cuenta / cuenta abierta / abierta,26,6,4,5,0,8,613,2,0,5,17,2,0,0,3
+imppixel / servidor / aplicativo imppixel,28,10,83,7,85,20,9,285,2,2,11,9,6,0,3
+comanda / impresion comanda / impresion,13,2,1,4,1,1,1,3,532,1,5,2,1,0,0
+pixel / pos / pixel pos,24,5,5,3,0,9,8,5,1,529,8,1,1,2,1
+informativo / tk informativo / tk,69,39,5,11,0,11,8,2,3,10,322,7,1,0,17
+conexion / servidor conexion / servidor,35,1,1,0,0,3,2,15,2,4,3,420,2,1,2
+delivery inicia / delivery / imppixel delivery,3,0,1,2,0,3,1,1,0,1,2,0,469,0,0
+pixel point / point / pixel,1,0,0,0,0,0,2,0,0,0,1,0,0,350,0
+boton / creacion / boton creacion,2,0,0,0,0,3,0,2,0,3,6,0,0,0,212

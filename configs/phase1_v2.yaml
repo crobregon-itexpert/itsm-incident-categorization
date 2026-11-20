@@ -1,0 +1,97 @@
+# Phase 1, v2: same taxonomy as phase1_v1 (labels fixed), inputs anonymized so data + code
+# can be shared. Every script reads this file.
+
+experiment_name: phase1_v2
+
+data:
+  raw_path: data/raw/Data_2024.xlsx      # original export (not committed)
+  sheet: Hoja1
+  interim_path: data/interim/tickets_v2.pkl  # cached, cleaned + anonymized table
+  shared_csv: data/itsm_incidents_2024_public.csv  # canonical input for all v2 models (itsm.export_dataset)
+  id_col: ID
+  title_col: Titulo        # "description or name" of the ticket
+  solution_col: Solución   # resolution notes written by the technician
+  type_col: Tipo
+  ticket_types: [Incidente]   # [Incidente, Requerimiento] to reproduce the legacy run
+  # Values in the solution field that mean "no solution recorded"
+  solution_missing_values: ["0", "", "nan", "-", "."]
+  # Human labels kept only for external validation of the clusters
+  external_label_cols: ["Nivel 1", "Nivel 2", "Grupo Asignado"]
+
+text:
+  lowercase: true
+  strip_accents: true
+  remove_stopwords: true
+  drop_tokens_with_digits: true     # store codes, dates, cash register numbers
+  min_token_len: 2
+  # Channel / email boilerplate that says nothing about the problem
+  boilerplate_phrases: ["soporte remoto", "soporte tecnico", "tk escalado", "re", "rv", "fw", "fwd"]
+  # Applied to the solution field only. The field label text of the technician's
+  # form says nothing about the problem, and the contact person's name and role are dropped.
+  solution_template:
+    drop_from: ['Nombre del Colaborador', 'Cargo del Colaborador']   # everything after this is removed
+    labels: ['Problema Especifico', 'Problema Específico', 'Causa', 'Descripción de la Solución', 'Descripcion de la Solucion', 'OBSERVACIONES']
+    phrases: ['problema se soluciona', 'se soluciona', 'problema solucionado']
+  abbreviations: {srv: servidor, pp: pixelpoint}
+  anonymize:
+    min_ticket_freq: 5          # words in fewer than 5 tickets are masked (k-anonymity on vocabulary)
+  fold_plurals: true            # boletas -> boleta when both forms occur in the corpus
+  # Generic words present in most tickets regardless of category (applied after plural folding)
+  domain_stopwords: [problema, inconveniente, favor, apoyo, buen, buenas, buenos, tardes, noches, gracias, saludos, estimados, estimado, usuario, indica]
+  # Store, requester and technician names are removed (they identify people and
+  # locations, not the problem). Tokens are taken from these columns...
+  name_cols: ["Solicitante", "Writer", "Asignado a Técnico"]
+  # ...except these, which are also IT / operational vocabulary.
+  name_token_keep: [almacen, call, center, delivery, movil, ncr, open, pixel, servicios, hub, luz, modulo, mod, caja, servidor]
+
+clustering:
+  # Text used to discover categories: title + solution (solution helps separate
+  # tickets with similar titles but different fixes).
+  fields: [title, solution]
+  tfidf: {ngram_range: [1, 2], min_df: 3, max_df: 0.5, max_features: 30000, sublinear_tf: true}
+  svd_components: 100          # LSA projection; K-means runs on normalized LSA vectors
+  k_values: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+  n_init: 10
+  stability_seeds: [0, 1, 2, 3, 4]
+  silhouette_sample: 10000
+  selected_k: 10               # set after inspecting the sweep; labels saved per k
+  labels_experiment: phase1_v1 # fixed taxonomy: reuse the approved k=10 labels
+  top_terms: 15
+  audit_sample_size: 300
+
+split:
+  # Stratified random split per seed. Templated alerts (e.g. "ImpPixel XX0-XXX-Servidor") are
+  # 83-86% of some categories, so title-group splits put whole categories in train. Instead,
+  # report all test tickets (operational) AND unseen titles (test titles absent from train).
+  method: stratified_random    # stratified_random | group
+  seeds: [0, 1, 2, 3, 4]
+  test_size: 0.20
+  val_size: 0.10               # of the whole dataset
+
+classification:
+  target: cluster              # cluster | grupo  (grupo = Grupo Asignado, human routing label)
+  input_fields: [title]        # what is known at ticket creation; [title, solution] = upper bound
+  min_class_count: 30          # classes smaller than this are dropped (grupo target only)
+  k_sensitivity: [6, 8, 9, 10, 12, 15]
+  tfidf_word: {ngram_range: [1, 2], min_df: 2, max_features: 50000, sublinear_tf: true}
+  tfidf_char: {analyzer: char_wb, ngram_range: [3, 5], min_df: 3, max_features: 100000, sublinear_tf: true}
+  models: [logreg, linear_svm, svm_word_char, complement_nb, random_forest, mlp]
+
+bert:
+  model_name: dccuchile/bert-base-spanish-wwm-cased
+  text_field: title_bert       # anonymized title in its original form (case, accents, word order)
+  max_len: 64
+  batch_size: 32
+  epochs: 4
+  learning_rate: 2.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  freeze_layers: 0             # number of lower encoder layers to freeze (0 = full fine-tuning)
+  class_weighted_loss: true
+  early_stopping_patience: 2   # on validation macro-F1
+
+output:
+  runs_dir: results/runs
+  summary_dir: results/summary
+  tables_dir: paper/tables
+  figures_dir: paper/figures

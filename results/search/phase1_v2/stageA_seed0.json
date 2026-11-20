@@ -1,0 +1,499 @@
+{
+  "protocol": {
+    "grid": [
+      {
+        "model": "bert_beto",
+        "learning_rate": 2e-05,
+        "class_weighted_loss": true
+      },
+      {
+        "model": "bert_beto",
+        "learning_rate": 2e-05,
+        "class_weighted_loss": false
+      },
+      {
+        "model": "bert_beto",
+        "learning_rate": 3e-05,
+        "class_weighted_loss": true
+      },
+      {
+        "model": "bert_beto",
+        "learning_rate": 3e-05,
+        "class_weighted_loss": false
+      },
+      {
+        "model": "roberta_bne",
+        "learning_rate": 2e-05,
+        "class_weighted_loss": true
+      },
+      {
+        "model": "roberta_bne",
+        "learning_rate": 2e-05,
+        "class_weighted_loss": false
+      },
+      {
+        "model": "roberta_bne",
+        "learning_rate": 3e-05,
+        "class_weighted_loss": true
+      },
+      {
+        "model": "roberta_bne",
+        "learning_rate": 3e-05,
+        "class_weighted_loss": false
+      }
+    ],
+    "fixed": {
+      "text_field": "title_bert",
+      "max_len": 64,
+      "batch_size": 32,
+      "max_epochs": 8,
+      "early_stopping_patience": 2,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1
+    },
+    "selection": "max validation macro-F1 on seed 0; test never scored in stage A",
+    "dataset_sha256": "42a85a3d6bbcb39d867fb77a2f15ee569e96129c9f37fc57854c5febd505cfc9"
+  },
+  "runs": [
+    {
+      "config": {
+        "model": "bert_beto",
+        "learning_rate": 2e-05,
+        "class_weighted_loss": true
+      },
+      "checkpoint": "dccuchile/bert-base-spanish-wwm-cased",
+      "best_val_macro_f1": 0.8466506951060181,
+      "best_epoch": 4,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.8703960873015965,
+          "val_accuracy": 0.7953558302706315,
+          "val_macro_f1": 0.7980759855608206,
+          "elapsed_s": 138.4
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.49151251863773543,
+          "val_accuracy": 0.8331105913798864,
+          "val_macro_f1": 0.8348806387821505,
+          "elapsed_s": 275.1
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4334592445149221,
+          "val_accuracy": 0.8407951887738055,
+          "val_macro_f1": 0.8411573217758785,
+          "elapsed_s": 412.0
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.39121267312981245,
+          "val_accuracy": 0.8524891413297695,
+          "val_macro_f1": 0.8466506951060181,
+          "elapsed_s": 549.1
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.35045361079503107,
+          "val_accuracy": 0.8312729702639492,
+          "val_macro_f1": 0.8310304881958033,
+          "elapsed_s": 686.7
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.31840240043225404,
+          "val_accuracy": 0.8491480120280654,
+          "val_macro_f1": 0.8443871562723034,
+          "elapsed_s": 823.4
+        }
+      ],
+      "fit_seconds": 823.4014701899999,
+      "n_train": 41902,
+      "n_val": 5986
+    },
+    {
+      "config": {
+        "model": "bert_beto",
+        "learning_rate": 2e-05,
+        "class_weighted_loss": false
+      },
+      "checkpoint": "dccuchile/bert-base-spanish-wwm-cased",
+      "best_val_macro_f1": 0.8646688518302357,
+      "best_epoch": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.8148602312302772,
+          "val_accuracy": 0.861343133979285,
+          "val_macro_f1": 0.8504545214014039,
+          "elapsed_s": 136.1
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.4791084820873865,
+          "val_accuracy": 0.8681924490477781,
+          "val_macro_f1": 0.8569802557148755,
+          "elapsed_s": 271.7
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4319671269904339,
+          "val_accuracy": 0.8743735382559304,
+          "val_macro_f1": 0.8646688518302357,
+          "elapsed_s": 408.5
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.3962191005955443,
+          "val_accuracy": 0.8748747076511861,
+          "val_macro_f1": 0.8634925028895196,
+          "elapsed_s": 544.8
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.36144672540933576,
+          "val_accuracy": 0.8693618443033745,
+          "val_macro_f1": 0.8559193842842058,
+          "elapsed_s": 681.2
+        }
+      ],
+      "fit_seconds": 681.1815522510001,
+      "n_train": 41902,
+      "n_val": 5986
+    },
+    {
+      "config": {
+        "model": "bert_beto",
+        "learning_rate": 3e-05,
+        "class_weighted_loss": true
+      },
+      "checkpoint": "dccuchile/bert-base-spanish-wwm-cased",
+      "best_val_macro_f1": 0.842337894367156,
+      "best_epoch": 2,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.8193927172429234,
+          "val_accuracy": 0.8020380888740394,
+          "val_macro_f1": 0.8038815254119411,
+          "elapsed_s": 135.9
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.4947864110091033,
+          "val_accuracy": 0.8417975275643167,
+          "val_macro_f1": 0.842337894367156,
+          "elapsed_s": 272.4
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4372765226360723,
+          "val_accuracy": 0.8374540594721016,
+          "val_macro_f1": 0.8364758299056175,
+          "elapsed_s": 408.9
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.39078172499043795,
+          "val_accuracy": 0.8499832943534915,
+          "val_macro_f1": 0.8422990463351783,
+          "elapsed_s": 560.1
+        }
+      ],
+      "fit_seconds": 560.1069973449999,
+      "n_train": 41902,
+      "n_val": 5986
+    },
+    {
+      "config": {
+        "model": "bert_beto",
+        "learning_rate": 3e-05,
+        "class_weighted_loss": false
+      },
+      "checkpoint": "dccuchile/bert-base-spanish-wwm-cased",
+      "best_val_macro_f1": 0.8627697409755551,
+      "best_epoch": 3,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.7695801663205368,
+          "val_accuracy": 0.8625125292348814,
+          "val_macro_f1": 0.8511924165025924,
+          "elapsed_s": 140.6
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.4788860551899171,
+          "val_accuracy": 0.8698630136986302,
+          "val_macro_f1": 0.856898961881624,
+          "elapsed_s": 277.9
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.43047905891906213,
+          "val_accuracy": 0.8748747076511861,
+          "val_macro_f1": 0.8627697409755551,
+          "elapsed_s": 415.3
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.3911769183253059,
+          "val_accuracy": 0.8728700300701637,
+          "val_macro_f1": 0.8590476422641222,
+          "elapsed_s": 552.9
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.35462269922078565,
+          "val_accuracy": 0.8725359171399933,
+          "val_macro_f1": 0.8592436993323197,
+          "elapsed_s": 690.5
+        }
+      ],
+      "fit_seconds": 690.4829469410001,
+      "n_train": 41902,
+      "n_val": 5986
+    },
+    {
+      "config": {
+        "model": "xlmr",
+        "learning_rate": 2e-05,
+        "class_weighted_loss": true
+      },
+      "checkpoint": "FacebookAI/xlm-roberta-base",
+      "best_val_macro_f1": 0.8473244069961577,
+      "best_epoch": 4,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.1295687324559416,
+          "val_accuracy": 0.8225860340795189,
+          "val_macro_f1": 0.8228605204481255,
+          "elapsed_s": 227.7
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.5244158063453572,
+          "val_accuracy": 0.8264283327764784,
+          "val_macro_f1": 0.8302575790372491,
+          "elapsed_s": 455.7
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4723960802925907,
+          "val_accuracy": 0.8297694620781825,
+          "val_macro_f1": 0.8316031356742141,
+          "elapsed_s": 682.3
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.44432841867549727,
+          "val_accuracy": 0.8491480120280654,
+          "val_macro_f1": 0.8473244069961577,
+          "elapsed_s": 909.0
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.41501313091063774,
+          "val_accuracy": 0.8230872034747745,
+          "val_macro_f1": 0.8268249110931494,
+          "elapsed_s": 1135.4
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.3928938847148919,
+          "val_accuracy": 0.8483127297026395,
+          "val_macro_f1": 0.846616715419921,
+          "elapsed_s": 1361.6
+        }
+      ],
+      "fit_seconds": 1361.639165316,
+      "n_train": 41902,
+      "n_val": 5986
+    },
+    {
+      "config": {
+        "model": "xlmr",
+        "learning_rate": 2e-05,
+        "class_weighted_loss": false
+      },
+      "checkpoint": "FacebookAI/xlm-roberta-base",
+      "best_val_macro_f1": 0.8662474131410833,
+      "best_epoch": 6,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.047054684310014,
+          "val_accuracy": 0.8575008352823255,
+          "val_macro_f1": 0.843148628446461,
+          "elapsed_s": 225.8
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.5141441797197775,
+          "val_accuracy": 0.8685265619779485,
+          "val_macro_f1": 0.858053989665961,
+          "elapsed_s": 452.6
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4647683181494247,
+          "val_accuracy": 0.8740394253257601,
+          "val_macro_f1": 0.8605446197308062,
+          "elapsed_s": 678.8
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.43772799134083834,
+          "val_accuracy": 0.8743735382559304,
+          "val_macro_f1": 0.8627694313200701,
+          "elapsed_s": 905.9
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.4138205065754534,
+          "val_accuracy": 0.8760441029067825,
+          "val_macro_f1": 0.8634227426760617,
+          "elapsed_s": 1132.2
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.39309290118572365,
+          "val_accuracy": 0.8792181757434012,
+          "val_macro_f1": 0.8662474131410833,
+          "elapsed_s": 1359.0
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.3748850040791826,
+          "val_accuracy": 0.8788840628132308,
+          "val_macro_f1": 0.8648175980623043,
+          "elapsed_s": 1585.5
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.3606415697721807,
+          "val_accuracy": 0.8772134981623789,
+          "val_macro_f1": 0.8631207755199309,
+          "elapsed_s": 1812.3
+        }
+      ],
+      "fit_seconds": 1812.3300059539997,
+      "n_train": 41902,
+      "n_val": 5986
+    },
+    {
+      "config": {
+        "model": "xlmr",
+        "learning_rate": 3e-05,
+        "class_weighted_loss": true
+      },
+      "checkpoint": "FacebookAI/xlm-roberta-base",
+      "best_val_macro_f1": 0.8553733004028196,
+      "best_epoch": 4,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 1.0334890466780609,
+          "val_accuracy": 0.8192449047778149,
+          "val_macro_f1": 0.8115017389392409,
+          "elapsed_s": 225.8
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.5249913642936536,
+          "val_accuracy": 0.8351152689609088,
+          "val_macro_f1": 0.8362679412119324,
+          "elapsed_s": 452.3
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.4742866881362354,
+          "val_accuracy": 0.83194119612429,
+          "val_macro_f1": 0.8315730362340655,
+          "elapsed_s": 678.5
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.44114354923936244,
+          "val_accuracy": 0.8603407951887738,
+          "val_macro_f1": 0.8553733004028196,
+          "elapsed_s": 905.9
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.406676060333848,
+          "val_accuracy": 0.8396257935182092,
+          "val_macro_f1": 0.8380052131973704,
+          "elapsed_s": 1133.4
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.37944728652768916,
+          "val_accuracy": 0.8548279318409623,
+          "val_macro_f1": 0.8490633603980026,
+          "elapsed_s": 1360.9
+        }
+      ],
+      "fit_seconds": 1360.863482492,
+      "n_train": 41902,
+      "n_val": 5986
+    },
+    {
+      "config": {
+        "model": "xlmr",
+        "learning_rate": 3e-05,
+        "class_weighted_loss": false
+      },
+      "checkpoint": "FacebookAI/xlm-roberta-base",
+      "best_val_macro_f1": 0.8640668308558291,
+      "best_epoch": 2,
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.9696309294409424,
+          "val_accuracy": 0.862178416304711,
+          "val_macro_f1": 0.8516166200294583,
+          "elapsed_s": 226.5
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.507787492279788,
+          "val_accuracy": 0.8753758770464417,
+          "val_macro_f1": 0.8640668308558291,
+          "elapsed_s": 454.2
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.46431678862289616,
+          "val_accuracy": 0.8748747076511861,
+          "val_macro_f1": 0.8626574603772085,
+          "elapsed_s": 681.9
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.436874791678354,
+          "val_accuracy": 0.8752088205813565,
+          "val_macro_f1": 0.8634934024295037,
+          "elapsed_s": 908.8
+        }
+      ],
+      "fit_seconds": 908.7526106589994,
+      "n_train": 41902,
+      "n_val": 5986
+    }
+  ],
+  "selected": [
+    {
+      "model": "xlmr",
+      "learning_rate": 2e-05,
+      "class_weighted_loss": false
+    },
+    {
+      "model": "bert_beto",
+      "learning_rate": 2e-05,
+      "class_weighted_loss": false
+    }
+  ]
+}

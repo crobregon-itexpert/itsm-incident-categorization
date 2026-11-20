@@ -1,0 +1,26 @@
+\begin{table}[!t]
+\centering
+\caption{Automated evaluation of the deployed agent on 30 held-out test incidents and 5 out-of-scope requests (simulated store user: gemini-2.5-flash; judge: gemini-3.1-pro-preview). Out-of-scope requests correctly declined: 5/5, tickets created for them: 0.}
+\label{tab:agent_eval_v2}
+\footnotesize
+\begin{adjustbox}{max width=\columnwidth}
+\begin{tabular}{lccc}
+\hline
+Metric & All in-scope & Seen wording & Unseen wording \\
+\hline
+Cases (n) & 30 & 10 & 20 \\
+Classifier category correct & 50\% & 50\% & 50\% \\
+Classifier confident ($p\ge0.8$) & 57\% & 80\% & 45\% \\
+Agent proposed steps & 57\% & 70\% & 50\% \\
+Steps would solve (of proposals) & 24\% & 29\% & 20\% \\
+Resolved at first contact (of all) & 13\% & 20\% & 10\% \\
+Steps grounded in retrieved cases & 71\% & 57\% & 80\% \\
+Hallucinated steps (of proposals) & 29\% & 43\% & 20\% \\
+Ticket created when not solved & 96\% & 88\% & 100\% \\
+Wrongly declined as not IT (n) & 1 & 1 & 0 \\
+Registered as request/notice (n) & 6 & 0 & 6 \\
+Questions asked (mean) & 0.8 & 0.9 & 0.7 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table}

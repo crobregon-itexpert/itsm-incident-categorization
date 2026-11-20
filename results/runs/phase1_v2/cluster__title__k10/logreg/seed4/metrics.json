@@ -1,0 +1,190 @@
+{
+  "timestamp_utc": "2026-11-01T13:53:01+00:00",
+  "git_commit": "32e17b41f7957ca1a1e493bfe528504581e62a94-dirty",
+  "config_path": "configs/phase1_v2.yaml",
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v185-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.1",
+    "scipy": "1.18.1"
+  },
+  "setting": "cluster__title__k10",
+  "model": "logreg",
+  "seed": 4,
+  "labels": [
+    "General POS and store application issues",
+    "Cash-register application down (ImpPixel restart, NOC)",
+    "Receipt printing and open accounts",
+    "Store server services down (NOC restart)",
+    "Equipment and peripheral requests",
+    "SIAN interfaces and end-of-day processing",
+    "Kitchen order (comanda) printing",
+    "Informational tickets",
+    "Network and connectivity",
+    "Pixel Point POS down (NOC restart)"
+  ],
+  "test": {
+    "accuracy": 0.834029401937855,
+    "balanced_accuracy": 0.8635396486747237,
+    "macro_f1": 0.8315891922744489,
+    "weighted_f1": 0.8389768416483677,
+    "macro_precision": 0.809387798737181,
+    "macro_recall": 0.8635396486747237,
+    "n": 11972
+  },
+  "val": {
+    "accuracy": 0.8414634146341463,
+    "balanced_accuracy": 0.8698234486460859,
+    "macro_f1": 0.838216383132866,
+    "weighted_f1": 0.8457199061581961,
+    "macro_precision": 0.8155330509938405,
+    "macro_recall": 0.8698234486460859,
+    "n": 5986
+  },
+  "per_class_test": {
+    "General POS and store application issues": {
+      "precision": 0.8934362934362934,
+      "recall": 0.7642007926023778,
+      "f1-score": 0.8237807048771805,
+      "support": 4542.0
+    },
+    "Cash-register application down (ImpPixel restart, NOC)": {
+      "precision": 0.8771131339401821,
+      "recall": 0.8788273615635179,
+      "f1-score": 0.8779694109990237,
+      "support": 1535.0
+    },
+    "Receipt printing and open accounts": {
+      "precision": 0.9078751857355126,
+      "recall": 0.86482661004954,
+      "f1-score": 0.8858281986226894,
+      "support": 1413.0
+    },
+    "Store server services down (NOC restart)": {
+      "precision": 0.9343664539653601,
+      "recall": 0.9597378277153558,
+      "f1-score": 0.9468822170900693,
+      "support": 1068.0
+    },
+    "Equipment and peripheral requests": {
+      "precision": 0.6826923076923077,
+      "recall": 0.8377581120943953,
+      "f1-score": 0.752317880794702,
+      "support": 678.0
+    },
+    "SIAN interfaces and end-of-day processing": {
+      "precision": 0.8090659340659341,
+      "recall": 0.8791044776119403,
+      "f1-score": 0.8426323319027181,
+      "support": 670.0
+    },
+    "Kitchen order (comanda) printing": {
+      "precision": 0.8708133971291866,
+      "recall": 0.9562171628721541,
+      "f1-score": 0.9115191986644408,
+      "support": 571.0
+    },
+    "Informational tickets": {
+      "precision": 0.3982589771490751,
+      "recall": 0.6455026455026455,
+      "f1-score": 0.49259757738896365,
+      "support": 567.0
+    },
+    "Network and connectivity": {
+      "precision": 0.7983050847457627,
+      "recall": 0.8674033149171271,
+      "f1-score": 0.8314210061782877,
+      "support": 543.0
+    },
+    "Pixel Point POS down (NOC restart)": {
+      "precision": 0.9219512195121952,
+      "recall": 0.9818181818181818,
+      "f1-score": 0.9509433962264151,
+      "support": 385.0
+    },
+    "accuracy": 0.834029401937855,
+    "macro avg": {
+      "precision": 0.809387798737181,
+      "recall": 0.8635396486747237,
+      "f1-score": 0.8315891922744489,
+      "support": 11972.0
+    },
+    "weighted avg": {
+      "precision": 0.8521136858033832,
+      "recall": 0.834029401937855,
+      "f1-score": 0.8389768416483677,
+      "support": 11972.0
+    }
+  },
+  "target": "cluster",
+  "inputs": [
+    "title"
+  ],
+  "k": 10,
+  "features": "word",
+  "n_features": 6244,
+  "best_params": {
+    "C": 1.0
+  },
+  "grid": [
+    {
+      "params": {
+        "C": 0.25
+      },
+      "val_macro_f1": 0.8375581844616408,
+      "fit_seconds": 1.0688691760001348,
+      "epochs": null
+    },
+    {
+      "params": {
+        "C": 1.0
+      },
+      "val_macro_f1": 0.838216383132866,
+      "fit_seconds": 1.3790259269999297,
+      "epochs": null
+    },
+    {
+      "params": {
+        "C": 4.0
+      },
+      "val_macro_f1": 0.8325569903274955,
+      "fit_seconds": 1.8674295870000606,
+      "epochs": null
+    },
+    {
+      "params": {
+        "C": 16.0
+      },
+      "val_macro_f1": 0.8274252958826629,
+      "fit_seconds": 3.2913443229999757,
+      "epochs": null
+    }
+  ],
+  "fit_seconds": 1.3790259269999297,
+  "feature_seconds": 0.26275632699980633,
+  "predict_ms_per_ticket": 0.0001986759939681164,
+  "n_train": 41902,
+  "n_val": 5986,
+  "n_test": 11972,
+  "test_unique_titles": {
+    "accuracy": 0.6982758620689655,
+    "balanced_accuracy": 0.6558139120787208,
+    "macro_f1": 0.6302899948468693,
+    "weighted_f1": 0.6974080448179545,
+    "macro_precision": 0.6353916813060568,
+    "macro_recall": 0.6558139120787208,
+    "n": 4640
+  },
+  "test_unseen_titles": {
+    "accuracy": 0.7258064516129032,
+    "balanced_accuracy": 0.6267799439057908,
+    "macro_f1": 0.612579270056863,
+    "weighted_f1": 0.7282160879452374,
+    "macro_precision": 0.6515242285598591,
+    "macro_recall": 0.6267799439057908,
+    "n": 2294,
+    "n_tickets": 2362
+  }
+}

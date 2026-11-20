@@ -1,0 +1,28 @@
+\begin{table*}[!t]
+\centering
+\caption{Confidence threshold for the ``unclassified'' option: tickets whose top-class probability is below the threshold are left to the analyst. Coverage = share classified automatically; accuracy and macro-F1 on the classified tickets. Mean $\pm$ std over 5 splits. ECE: BERT (BETO, tuned) 0.039, XLM-RoBERTa (tuned) 0.043.}
+\label{tab:confidence}
+\footnotesize
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{llccc}
+\hline
+Model & Threshold & Coverage (\%) & Accuracy (\%) & Macro-F1 \\
+\hline
+BERT (BETO, tuned) & none & 100.0 $\pm$ 0.0 & 87.2 $\pm$ 0.2 & 0.857 $\pm$ 0.003 \\
+BERT (BETO, tuned) & 0.50 & 98.2 $\pm$ 0.8 & 88.0 $\pm$ 0.4 & 0.865 $\pm$ 0.005 \\
+BERT (BETO, tuned) & 0.60 & 94.7 $\pm$ 1.4 & 89.3 $\pm$ 0.5 & 0.877 $\pm$ 0.006 \\
+BERT (BETO, tuned) & 0.70 & 90.8 $\pm$ 1.8 & 90.5 $\pm$ 0.6 & 0.889 $\pm$ 0.008 \\
+BERT (BETO, tuned) & 0.80 & 85.0 $\pm$ 2.4 & 92.1 $\pm$ 0.7 & 0.905 $\pm$ 0.009 \\
+BERT (BETO, tuned) & 0.90 & 76.2 $\pm$ 3.7 & 93.9 $\pm$ 0.8 & 0.924 $\pm$ 0.010 \\
+BERT (BETO, tuned) & 0.95 & 64.4 $\pm$ 3.9 & 95.3 $\pm$ 0.6 & 0.940 $\pm$ 0.008 \\
+XLM-RoBERTa (tuned) & none & 100.0 $\pm$ 0.0 & 87.2 $\pm$ 0.1 & 0.857 $\pm$ 0.002 \\
+XLM-RoBERTa (tuned) & 0.50 & 98.3 $\pm$ 0.3 & 87.9 $\pm$ 0.1 & 0.864 $\pm$ 0.004 \\
+XLM-RoBERTa (tuned) & 0.60 & 95.4 $\pm$ 0.6 & 89.1 $\pm$ 0.2 & 0.874 $\pm$ 0.003 \\
+XLM-RoBERTa (tuned) & 0.70 & 91.5 $\pm$ 1.0 & 90.3 $\pm$ 0.3 & 0.886 $\pm$ 0.004 \\
+XLM-RoBERTa (tuned) & 0.80 & 86.2 $\pm$ 1.2 & 91.8 $\pm$ 0.3 & 0.900 $\pm$ 0.005 \\
+XLM-RoBERTa (tuned) & 0.90 & 76.8 $\pm$ 1.4 & 93.8 $\pm$ 0.2 & 0.922 $\pm$ 0.005 \\
+XLM-RoBERTa (tuned) & 0.95 & 65.7 $\pm$ 3.9 & 95.3 $\pm$ 0.4 & 0.942 $\pm$ 0.008 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table*}
