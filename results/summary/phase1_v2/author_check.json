@@ -1,0 +1,238 @@
+{
+  "n_labeled": 59,
+  "author_vs_cluster": {
+    "agreement": 0.576271186440678,
+    "kappa": 0.5302547770700637
+  },
+  "author_vs_gemini": {
+    "agreement": 0.5932203389830508,
+    "kappa": 0.5489009238611022
+  },
+  "gemini_vs_cluster_same_tickets": 0.9661016949152542,
+  "author_vs_cluster_by_category": {
+    "0": 0.5,
+    "1": 1.0,
+    "2": 1.0,
+    "3": 0.167,
+    "4": 0.5,
+    "5": 0.833,
+    "6": 0.833,
+    "7": 0.167,
+    "8": 0.667,
+    "9": 0.167
+  },
+  "author_vs_cluster_non_alert_categories": 0.6428571428571429,
+  "post_hoc_alerts_merged": {
+    "agreement": 0.7457627118644068,
+    "kappa": 0.6932409012131715
+  },
+  "confusion": {
+    "0": {
+      "0": 3,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 1,
+      "6": 0,
+      "7": 1,
+      "8": 0,
+      "9": 0
+    },
+    "1": {
+      "0": 1,
+      "1": 5,
+      "2": 0,
+      "3": 1,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 1,
+      "8": 0,
+      "9": 5
+    },
+    "2": {
+      "0": 0,
+      "1": 0,
+      "2": 6,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 1,
+      "7": 1,
+      "8": 0,
+      "9": 0
+    },
+    "3": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "4": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 3,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 1,
+      "9": 0
+    },
+    "5": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 5,
+      "6": 0,
+      "7": 1,
+      "8": 1,
+      "9": 0
+    },
+    "6": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 5,
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "7": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 1,
+      "5": 0,
+      "6": 0,
+      "7": 1,
+      "8": 0,
+      "9": 0
+    },
+    "8": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 2,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 4,
+      "9": 0
+    },
+    "9": {
+      "0": 2,
+      "1": 0,
+      "2": 0,
+      "3": 4,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 1,
+      "8": 0,
+      "9": 1
+    }
+  },
+  "notes": [
+    {
+      "audit_id": "A207",
+      "cluster_label": 7,
+      "author": 5,
+      "note": "Falta categoría cuadre de caja"
+    },
+    {
+      "audit_id": "A078",
+      "cluster_label": 4,
+      "author": 8,
+      "note": "End User Computing"
+    },
+    {
+      "audit_id": "A265",
+      "cluster_label": 2,
+      "author": 2,
+      "note": "Tambien puede ser 6 ó 8"
+    }
+  ],
+  "judge_check": {
+    "n": 8,
+    "author_would_solve": 8,
+    "judge_would_solve": 2,
+    "agreement_would_solve": 0.25,
+    "author_hallucination": 0,
+    "judge_hallucination": 3,
+    "agreement_hallucination": 0.625,
+    "cases": [
+      {
+        "case_id": "C15",
+        "author_would_solve": 1,
+        "author_hallucination": 0,
+        "judge_would_solve": 1,
+        "judge_hallucination": 0
+      },
+      {
+        "case_id": "C06",
+        "author_would_solve": 1,
+        "author_hallucination": 0,
+        "judge_would_solve": 0,
+        "judge_hallucination": 1
+      },
+      {
+        "case_id": "C13",
+        "author_would_solve": 1,
+        "author_hallucination": 0,
+        "judge_would_solve": 0,
+        "judge_hallucination": 0
+      },
+      {
+        "case_id": "C26",
+        "author_would_solve": 1,
+        "author_hallucination": 0,
+        "judge_would_solve": 0,
+        "judge_hallucination": 1
+      },
+      {
+        "case_id": "C22",
+        "author_would_solve": 1,
+        "author_hallucination": 0,
+        "judge_would_solve": 0,
+        "judge_hallucination": 0
+      },
+      {
+        "case_id": "C27",
+        "author_would_solve": 1,
+        "author_hallucination": 0,
+        "judge_would_solve": 0,
+        "judge_hallucination": 0
+      },
+      {
+        "case_id": "C04",
+        "author_would_solve": 1,
+        "author_hallucination": 0,
+        "judge_would_solve": 0,
+        "judge_hallucination": 0
+      },
+      {
+        "case_id": "C24",
+        "author_would_solve": 1,
+        "author_hallucination": 0,
+        "judge_would_solve": 1,
+        "judge_hallucination": 1
+      }
+    ]
+  }
+}
