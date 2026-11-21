@@ -367,6 +367,15 @@ deployed service uses the MLP (Section~\ref{sec:architecture}).
 
 Fig.~\ref{fig:arch} shows the architecture. It has two parts.
 
+\paragraph{Technology stack} Data preparation, clustering and the classical models use Python with pandas
+and scikit-learn \cite{pedregosa2011}; the transformers are fine-tuned with Hugging Face Transformers on a Google
+Colab T4 GPU. The deployed system runs on Google Cloud: the classifier service (Python, Flask) and the agent
+(Node.js, Microsoft Bot Framework) on Cloud Run, Gemini on Vertex AI, and the assets in a private Cloud Storage
+bucket; tickets are created through the Jira Service Management REST API. Deployment and the automated agent and
+baseline evaluations run as GitHub Actions workflows. Claude Code (Anthropic) was used as a development tool, to
+write and review the code and to automate the experiment, deployment and test workflows; all results come from
+the logged runs.
+
 \paragraph{Classifier service} The classifier is published as a private API on Google Cloud Run. Given the
 user's description it returns the category, its probability and the top-3 categories, and ``unclassified'' when
 the probability is below the 0.8 threshold (Table~\ref{tab:confidence}). The deployed model is the MLP on word
