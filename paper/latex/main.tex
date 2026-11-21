@@ -537,36 +537,6 @@ All tables and figures in this paper are generated from the logs by \texttt{pyth
 components of the deployed agent are included; its model and knowledge-base assets, built from private data, are
 not.
 
-\section*{Author Contributions}
-C.~Obregón: conceptualization, data curation, methodology, software, validation, investigation, writing---original
-draft, review and editing. Y.-D.~Yao: supervision, writing---review and editing.
-
-\section*{Funding}
-This research received no external funding; its costs, including cloud services, were covered by the first author.
-
-\section*{Institutional Review Board Statement}
-Not applicable: the study uses historical service-desk records and no experiment with human participants; the
-agent evaluation uses a simulated user.
-
-\section*{Data Statement}
-The incidents are real operational records of the service desk. They were anonymized before analysis and
-release: the organization is not identified, and personal names, store identifiers and digits are masked in
-titles and resolution notes, with words that occur in fewer than five tickets replaced by a placeholder. In the
-public file, company, group and brand identifiers are additionally replaced by neutral codes through a one-to-one
-word substitution applied after the experiments, which leaves word-level features unchanged. Only
-the fields needed to reproduce the experiments are released.
-
-\section*{Conflicts of Interest}
-The authors declare no conflict of interest.
-
-\section*{Use of Generative AI}
-Large language models are components of the system and of its evaluation: Gemini~2.5~Flash runs the agent and the
-simulated user, Gemini~3.1~Pro is the evaluation judge, and Gemini~2.5~Flash is the external classification baseline
-and the second rater of the label audit, as described in the text. During the preparation of this work, the authors
-used Claude (Anthropic) to write and review analysis and deployment code, to run and log the experiments, and to
-draft and edit the manuscript and the response to reviewers. The authors reviewed all content and take full
-responsibility for the accuracy and integrity of the published article.
-
 \appendices
 \section{Hyperparameters}\label{app:hp}
 Classical models (scikit-learn \cite{pedregosa2011}), selected on validation macro-F1: logistic regression
