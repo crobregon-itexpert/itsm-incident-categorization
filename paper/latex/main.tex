@@ -19,6 +19,11 @@
 \author{\IEEEauthorblockN{Claudio Obregón}
 \IEEEauthorblockA{\textit{ECE Department} \\
 \textit{Stevens Institute of Technology}\\
+Hoboken, NJ, United States of America}
+\and
+\IEEEauthorblockN{Yu-Dong Yao}
+\IEEEauthorblockA{\textit{ECE Department} \\
+\textit{Stevens Institute of Technology}\\
 Hoboken, NJ, United States of America}}
 
 \maketitle
@@ -183,23 +188,23 @@ ids are ordered by size and the label of each ticket is stored, so the taxonomy 
 \paragraph{Naming} For each cluster, an evidence sheet lists its size, top TF-IDF terms, dominant
 \emph{Nivel 1}, \emph{Nivel 2} and resolver group, and 20 random tickets. An AI assistant drafted an English
 name (used in this paper), a Spanish name (used in the interface) and a definition from this evidence; the
-author, as service desk lead, reviewed and approved them (Table~\ref{tab:categories}). Three categories (1, 3,
+first author, as service desk lead, reviewed and approved them (Table~\ref{tab:categories}). Three categories (1, 3,
 9) are automated monitoring alerts resolved by restarting an application; category 0 is a heterogeneous
 catch-all (37.9\%).
 
 \paragraph{Label audit} Pseudo-label noise is estimated on a stratified sample of 300 tickets (30 per
 category), fixed before any audit was run. Gemini~2.5~Flash (temperature 0), given the title, the resolution note
 and the category definitions, judged 88.7\% of the cluster labels correct, 10.0\% wrong and 1.3\% doubtful; its
-preferred category agreed with the cluster label on 90.3\% of the tickets (Cohen's $\kappa=0.89$). The author, as
+preferred category agreed with the cluster label on 90.3\% of the tickets (Cohen's $\kappa=0.89$). The first author, as
 service desk lead, then labeled a blind subsample of 59 of these tickets (six per category; one left blank). His
 labels agreed with the cluster labels on only 57.6\% ($\kappa=0.53$) and with Gemini on 59.3\% ($\kappa=0.55$),
 while Gemini agreed with the cluster labels on 96.6\% of the same tickets. Two patterns explain most of the gap.
-First, the three monitoring-alert categories were confused with one another: the author assigned templated
+First, the three monitoring-alert categories were confused with one another: the first author assigned templated
 ``Pixel Point \ldots{} Caja'' alerts (category 9) to category 1 and ``ImpPixel \ldots{} Servidor'' alerts (category
 3) to category 9, a consistent swap that points to ambiguous category names rather than to wrong clusters;
 merging the three alert categories post hoc raises agreement to 74.6\% ($\kappa=0.69$). Second, the
 informational category 7 (one of six) and the catch-all category 0 (three of six) were the least confirmed, and
-the author noted tickets that would need a category the taxonomy lacks (cash reconciliation) and requests
+the first author noted tickets that would need a category the taxonomy lacks (cash reconciliation) and requests
 recorded as incidents in the source system. The LLM rater reads the same definitions that were written from the
 clusters and therefore mostly measures their internal consistency; the human check shows that a substantial
 part of the labels, about one in four even after merging the alert categories, would be assigned differently by
@@ -428,7 +433,7 @@ proposed steps with the actual resolution and with the retrieved cases and score
 problem, whether each step is grounded in a retrieved case, and whether any step or system is invented; the
 simulated user confirms the problem as solved only if the judge says the steps would solve it. Category, decision,
 ticket and timing are recorded automatically. Table~\ref{tab:agent_eval_v2} reports the results. To check the
-judge, the author rated eight of the proposals blind to its verdict: he considered all eight would solve the
+judge, the first author rated eight of the proposals blind to its verdict: he considered all eight would solve the
 problem and none invented, whereas the judge accepted two and flagged three as containing unsupported steps
 (agreement 25\% and 62.5\%). The judge is therefore much stricter than a domain expert, and the first-contact
 resolution and hallucination figures below should be read as a conservative bound.
@@ -464,7 +469,7 @@ and records the case in Jira (ticket created and closed as resolved at first con
 
 \paragraph{Pseudo-labels} The categories are cluster assignments, and the sweep shows weak cluster structure.
 Accuracy measures agreement with this taxonomy, not with an independent human truth; the label audit estimates
-how far an expert would confirm the taxonomy: an LLM rater confirmed 88.7\% of the labels, but the author agreed
+how far an expert would confirm the taxonomy: an LLM rater confirmed 88.7\% of the labels, but the first author agreed
 with only 57.6\% of them on a blind subsample (74.6\% after merging the three alert categories). Part of the
 disagreement comes from ambiguous names of the alert categories, part from the heterogeneous catch-all and
 informational categories, and part from tickets mis-recorded as incidents in the source system. All accuracies
@@ -491,7 +496,7 @@ so grounding must be enforced more strictly (e.g., by quoting the retrieved acti
 
 \paragraph{Agent evaluation scope} The agent evaluation is reduced: an offline proxy for retrieval and 35 cases
 with a simulated user and an LLM judge. Both the user and the judge are language models; the judge was not
-validated against human ratings beyond an eight-case check, in which it was much stricter than the author, and a
+validated against human ratings beyond an eight-case check, in which it was much stricter than the first author, and a
 simulated user may describe problems more clearly or more uniformly than store staff. With 30 in-scope cases, each percentage has a wide confidence interval (about $\pm$15--18 points).
 The evaluation shows feasibility and failure modes, not production impact; a study with real users and several
 human raters is needed before claiming effects on first-contact resolution.
@@ -534,10 +539,10 @@ not.
 
 \section*{Author Contributions}
 C.~Obregón: conceptualization, data curation, methodology, software, validation, investigation, writing---original
-draft, review and editing. \pending{Confirm the list of authors and roles.}
+draft, review and editing. Y.-D.~Yao: supervision, writing---review and editing.
 
 \section*{Funding}
-This research received no external funding; its costs, including cloud services, were covered by the author.
+This research received no external funding; its costs, including cloud services, were covered by the first author.
 
 \section*{Institutional Review Board Statement}
 Not applicable: the study uses historical service-desk records and no experiment with human participants; the
@@ -552,14 +557,14 @@ word substitution applied after the experiments, which leaves word-level feature
 the fields needed to reproduce the experiments are released.
 
 \section*{Conflicts of Interest}
-The author declares no conflict of interest.
+The authors declare no conflict of interest.
 
 \section*{Use of Generative AI}
 Large language models are components of the system and of its evaluation: Gemini~2.5~Flash runs the agent and the
 simulated user, Gemini~3.1~Pro is the evaluation judge, and Gemini~2.5~Flash is the external classification baseline
-and the second rater of the label audit, as described in the text. During the preparation of this work, the author
+and the second rater of the label audit, as described in the text. During the preparation of this work, the authors
 used Claude (Anthropic) to write and review analysis and deployment code, to run and log the experiments, and to
-draft and edit the manuscript and the response to reviewers. The author reviewed all content and takes full
+draft and edit the manuscript and the response to reviewers. The authors reviewed all content and take full
 responsibility for the accuracy and integrity of the published article.
 
 \appendices

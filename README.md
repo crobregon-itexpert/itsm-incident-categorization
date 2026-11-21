@@ -1,7 +1,7 @@
 # IT service desk incident categorization (ML, transformers) and a first-contact LLM agent
 
 Code, configuration, run logs and an anonymized dataset for the paper **"IT Service Desk Automation Using ML
-and LLM"** (C. Obregón; revised version of manuscript AIEng-26010199).
+and LLM"** (C. Obregón and Y.-D. Yao; revised version of manuscript AIEng-26010199).
 
 - **Phase 1.** A static taxonomy of 10 incident categories is derived from 59,860 real service-desk incidents
   (Spanish, restaurant sector) and six TF-IDF classifiers and two fine-tuned transformers (BETO, XLM-RoBERTa)
